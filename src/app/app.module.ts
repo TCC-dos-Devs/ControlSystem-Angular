@@ -21,6 +21,13 @@ import { HomeComponent } from './pages/home/home.component';
     AddProductComponent,
     UpdateProductComponent,
     HomeComponent,
+ 
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+
+ 
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
