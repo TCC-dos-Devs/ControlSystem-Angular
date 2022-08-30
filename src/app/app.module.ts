@@ -1,3 +1,5 @@
+import { FormsModule } from '@angular/forms';
+import { PasswordModule } from 'primeng/password';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -22,7 +24,7 @@ import { HomeComponent } from './pages/home/home.component';
     UpdateProductComponent,
     HomeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, PasswordModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
