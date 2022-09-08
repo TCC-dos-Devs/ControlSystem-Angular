@@ -4,13 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-forget-password',
   templateUrl: './forget-password.component.html',
   styleUrls: ['./forget-password.component.css'],
-  styles: [
-    `
-      :host ::ng-deep .p-password input {
-        width: 15rem;
-      }
-    `,
-  ],
+  styles: [``],
 })
 export class ForgetPasswordComponent implements OnInit {
   constructor() {}
@@ -19,9 +13,7 @@ export class ForgetPasswordComponent implements OnInit {
 
   value1!: string;
 
-  value2!: string;
-
-  value3!: string;
-
-  value4!: string;
+  handleClick() {
+    //execute action
+  }
 }
