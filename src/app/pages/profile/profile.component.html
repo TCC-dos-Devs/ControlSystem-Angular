@@ -28,9 +28,91 @@
           </nav>
           <div class="imgArea">
             <img src="../../../assets/logoIF.png" />
+            <p>
+              Instituto Federal Baiano <br />
+              Campus Uruçuca
+            </p>
           </div>
         </aside>
-        <main></main>
+        <main>
+          <div class="topContent">
+            <p class="titleMain">Minhas Informações</p>
+            <div class="imgContent">
+              <p-avatar
+                image="../../../assets/iconUser.png"
+                styleClass="mr-2"
+                size="xlarge"
+                shape="circle"
+                [style]="{
+                  width: '225px',
+                  height: '225px'
+                }"
+              ></p-avatar>
+            </div>
+          </div>
+          <div class="bottomContent">
+            <div class="leftContent">
+              <p class="titleText">Informações da conta</p>
+              <div class="inputContent">
+                <label class="label" for="value2">E-mail</label>
+                <input
+                  class="input"
+                  id="username1"
+                  type="email"
+                  aria-describedby="username1-help"
+                  pInputText
+                  [(ngModel)]="value1"
+                  placeholder="example@gmail.com"
+                />
+
+                <label class="label" for="value3">Usuário</label>
+                <input
+                  class="input"
+                  id="username1"
+                  type="username"
+                  aria-describedby="username1-help"
+                  pInputText
+                  [(ngModel)]="value2"
+                  placeholder="userName"
+                />
+
+                <label class="label" for="value4">Senha</label>
+                <p-password
+                  id="value2"
+                  placeholder="******S7"
+                  [(ngModel)]="value3"
+                  [toggleMask]="true"
+                ></p-password>
+              </div>
+            </div>
+            <div class="rightContent">
+              <p class="titleText">Altere a sua senha</p>
+              <div class="inputContent">
+                <label class="label" for="value2">Senha atual</label>
+                <p-password
+                  id="value2"
+                  placeholder="Digite a senha atual"
+                  [(ngModel)]="value4"
+                  [toggleMask]="true"
+                ></p-password>
+                <label class="label" for="value3">Nova senha</label>
+                <p-password
+                  id="value3"
+                  placeholder="Digite a nova senha"
+                  [(ngModel)]="value5"
+                  [toggleMask]="true"
+                ></p-password>
+                <label class="label" for="value4">Confirme a senha</label>
+                <p-password
+                  id="value4"
+                  placeholder="Digite a nova senha novamente"
+                  [(ngModel)]="value6"
+                  [toggleMask]="true"
+                ></p-password>
+              </div>
+            </div>
+          </div>
+        </main>
       </div>
     </section>
   </body>
