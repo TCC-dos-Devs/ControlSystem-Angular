@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { PasswordModule } from 'primeng/password';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { AvatarModule } from 'primeng/avatar';
 
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -34,6 +35,7 @@ import { HomeComponent } from './pages/home/home.component';
     FormsModule,
     InputTextModule,
     ButtonModule,
+    AvatarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
