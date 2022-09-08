@@ -1,0 +1,36 @@
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px;
+  align-items: center;
+  background-color: #067344;
+}
+
+.titleHeader {
+  font-family: "Open Sans", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 53px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.btnArea {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+/* --------------------------------- */
+
+/* MAIN */
+.titlePage {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* ---------------------------------- */

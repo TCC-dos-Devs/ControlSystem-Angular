@@ -1,2 +1,50 @@
-<h2>home</h2>
-<a routerLink="/esqueceu-senha">Esqueci Senha</a>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1 class="titleHeader">Instituto Federal Baiano Campus Uruçuca</h1>
+      </div>
+      <div class="btnArea">
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="Adicionar produto"
+          (click)="handleClick()"
+          routerLink="/adicionar-produto"
+          class="p-button-raised p-button-danger"
+          [ngStyle]="{
+            backgroundColor: 'var(--red-500)',
+            border: 'none',
+            width: '200px',
+            height: '50px'
+          }"
+        ></button>
+        <button
+          pButton
+          pRipple
+          type="button"
+          icon="pi pi-user"
+          routerLink="/perfil"
+          class="p-button-rounded p-button-info"
+          [ngStyle]="{
+            backgroundColor: 'var(--bluegray-300)',
+            border: 'none',
+            width: '70px',
+            height: '70px'
+          }"
+        ></button>
+      </div>
+    </header>
+    <main>
+      <h1 class="titlePage">Produtos</h1>
+    </main>
+  </body>
+</html>
