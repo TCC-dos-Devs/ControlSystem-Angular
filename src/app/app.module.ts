@@ -16,6 +16,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { AddProductComponent } from './pages/add-product/add-product.component';
 import { UpdateProductComponent } from './pages/update-product/update-product.component';
 import { HomeComponent } from './pages/home/home.component';
+import { DevelopersComponent } from './pages/developers/developers.component';
+import { IfbaianoComponent } from './pages/ifbaiano/ifbaiano.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { HomeComponent } from './pages/home/home.component';
     AddProductComponent,
     UpdateProductComponent,
     HomeComponent,
+    DevelopersComponent,
+    IfbaianoComponent,
   ],
   imports: [
     BrowserModule,
