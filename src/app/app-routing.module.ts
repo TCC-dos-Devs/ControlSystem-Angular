@@ -8,6 +8,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { AddProductComponent } from './pages/add-product/add-product.component';
 import { UpdateProductComponent } from './pages/update-product/update-product.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { DevelopersComponent } from './pages/developers/developers.component';
+import { IfbaianoComponent } from './pages/ifbaiano/ifbaiano.component';
 
 const routes: Routes = [
   { path: 'login', component: SignInComponent },
@@ -17,6 +19,8 @@ const routes: Routes = [
   { path: 'adicionar-produto', component: AddProductComponent },
   { path: 'atualizar-produto', component: UpdateProductComponent },
   { path: 'perfil', component: ProfileComponent },
+  { path: 'desenvolvedores', component: DevelopersComponent },
+  { path: 'ifbaiano', component: IfbaianoComponent },
 ];
 
 @NgModule({
