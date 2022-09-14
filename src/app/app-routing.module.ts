@@ -10,12 +10,14 @@ import { UpdateProductComponent } from './pages/update-product/update-product.co
 import { ProfileComponent } from './pages/profile/profile.component';
 import { DevelopersComponent } from './pages/developers/developers.component';
 import { IfbaianoComponent } from './pages/ifbaiano/ifbaiano.component';
+import { WelcomeComponent } from './pages/welcome/welcome.component';
 
 const routes: Routes = [
+  { path: '', component: WelcomeComponent },
   { path: 'login', component: SignInComponent },
-  { path: 'cadastro', component: SignUpComponent },
+  { path: 'criar-conta', component: SignUpComponent },
   { path: 'esqueceu-senha', component: ForgetPasswordComponent },
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'adicionar-produto', component: AddProductComponent },
   { path: 'atualizar-produto', component: UpdateProductComponent },
   { path: 'perfil', component: ProfileComponent },
