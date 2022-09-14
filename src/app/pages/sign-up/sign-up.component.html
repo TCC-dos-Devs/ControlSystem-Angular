@@ -1,38 +1,81 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro</title>
-</head>
-<body>
-    <div class="container">
-        
-        <div class="left">
-            <p class="title">Cadastre-se</p>
-            <div class="inputs">
-                <label for="input">Usuario</label>
-                <input id="input" type="text" placeholder="Digite aqui o Usuario">
-                <label for="input">Cadastrar Senha</label>
-                <input id="input" type="password" placeholder="Digite aqui a Senha">
-                <label for="input">Confirmar Senha</label>
-                <input id="input" type="password" placeholder="Confime aqui a sua Senha">
-            </div>
-            <div class="btn">
-                <button type="submit">Cadastrar-se</button>
-            </div>
-       </div>
+  </head>
+  <body>
+    <section class="container">
+      <section class="content-left">
+        <p class="title">Criar Conta</p>
+        <div class="input-container">
+          <div class="content-input">
+            
+            <label for="email1">E-mail</label>
+            <input
+              id="email1"
+              type="email"
+              aria-describedby="username1-help"
+              pInputText
+              [(ngModel)]="value1"
+              placeholder="Digite seu Email"
+            />
+           <label for="username1">Usuário</label>
+            <input
+              id="username1"
+              type="username"
+              aria-describedby="username1-help"
+              pInputText
+              [(ngModel)]="value2"
+              placeholder="Digite seu usuário"
+            />
+            <label for="password1">Senha</label>
+            <input
+              id="password1"
+              type="password"
+              aria-describedby="username1-help"
+              pInputText
+              [(ngModel)]="value3"
+              placeholder="Digite sua senha"
+            />
+            <label for="password2">Confirmar Senha</label>
+            <input
+              id="password2"
+              type="password"
+              aria-describedby="username1-help"
+              pInputText
+              [(ngModel)]="value4"
+              placeholder="Confirme sua senha"
+            />
 
-        <div class="right">
-            <img src="../../../assets/logoIF.png">
+            <div class="btn-container">
+              <button
+                pButton
+                pRipple
+                routerLink="/login"
+                type="button"
+                label="Cancelar"
+                class="p-button-raised p-button-secondary"
+              ></button>
+              <button
+                pButton
+                pRipple
+                type="button"
+                label="Enviar"
+                (click)="handleClick()"
+                class="p-button-raised p-button-danger"
+              ></button>
             </div>
-
-
-    </div>
-</body>
+          </div>
+        </div>
+      </section>
+      <section class="content-right">
+        <div class="image">
+          <img src="../../../assets/logoIF.png" />
+        </div>
+      </section>
+    </section>
+  </body>
 </html>
-
-
-
