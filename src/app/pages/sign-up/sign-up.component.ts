@@ -1,21 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
+import {} from '@angular/forms';
+import {} from '@angular/forms';
+
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.css']
+  styleUrls: ['./sign-up.component.css'],
 })
 export class SignUpComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
   value1!: string;
-
   value2!: string;
   value3!: string;
   value4!: string;
-  handleClick(){}
 }
-

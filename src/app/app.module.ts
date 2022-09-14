@@ -1,4 +1,5 @@
 import { FormsModule } from '@angular/forms';
+
 import { NgModule } from '@angular/core';
 import { PasswordModule } from 'primeng/password';
 import { InputTextModule } from 'primeng/inputtext';
@@ -18,6 +19,7 @@ import { UpdateProductComponent } from './pages/update-product/update-product.co
 import { HomeComponent } from './pages/home/home.component';
 import { DevelopersComponent } from './pages/developers/developers.component';
 import { IfbaianoComponent } from './pages/ifbaiano/ifbaiano.component';
+import { WelcomeComponent } from './pages/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +33,14 @@ import { IfbaianoComponent } from './pages/ifbaiano/ifbaiano.component';
     HomeComponent,
     DevelopersComponent,
     IfbaianoComponent,
+    WelcomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     PasswordModule,
     FormsModule,
+
     InputTextModule,
     ButtonModule,
     AvatarModule,

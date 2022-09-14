@@ -12,7 +12,7 @@ export class SignInComponent implements OnInit {
   ngOnInit(): void {}
 
   handleClick() {
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/home');
   }
   cancelClick() {
     this.router.navigateByUrl('/');
