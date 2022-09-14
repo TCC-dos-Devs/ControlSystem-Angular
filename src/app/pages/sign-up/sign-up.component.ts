@@ -1,3 +1,6 @@
+import { Router } from '@angular/router';
+import { UsuarioService } from './../../usuario.service';
+import { UsuarioDTO } from './../../dtos/usuario.dto';
 import { Component, OnInit } from '@angular/core';
 
 import {} from '@angular/forms';
@@ -9,12 +12,28 @@ import {} from '@angular/forms';
   styleUrls: ['./sign-up.component.css'],
 })
 export class SignUpComponent implements OnInit {
-  constructor() {}
+  usuario: UsuarioDTO = {
+    id: 0,
+    email: '',
+    usuario: '',
+    senha: '',
+    confirmar: '',
+  };
+
+  constructor(private service: UsuarioService, private router: Router) {}
 
   ngOnInit(): void {}
 
-  value1!: string;
-  value2!: string;
-  value3!: string;
-  value4!: string;
+  adicionar() {
+    this.service.salvar(this.usuario).subscribe((resposta) => {
+      this.usuario = {
+        id: 0,
+        email: '',
+        usuario: '',
+        senha: '',
+        confirmar: '',
+      };
+      this.router.navigateByUrl('/home');
+    });
+  }
 }

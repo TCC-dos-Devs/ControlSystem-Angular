@@ -7,6 +7,7 @@ import { ButtonModule } from 'primeng/button';
 import { AvatarModule } from 'primeng/avatar';
 
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -40,6 +41,7 @@ import { WelcomeComponent } from './pages/welcome/welcome.component';
     AppRoutingModule,
     PasswordModule,
     FormsModule,
+    HttpClientModule,
 
     InputTextModule,
     ButtonModule,
