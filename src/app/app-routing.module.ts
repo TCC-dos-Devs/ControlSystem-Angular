@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: '', component: WelcomeComponent },
   { path: 'login', component: SignInComponent },
   { path: 'criar-conta', component: SignUpComponent },
-  { path: 'esqueceu-senha', component: ForgetPasswordComponent },
+  { path: 'recuperar-senha', component: ForgetPasswordComponent },
   { path: 'home', component: HomeComponent },
   { path: 'adicionar-produto', component: AddProductComponent },
   { path: 'atualizar-produto', component: UpdateProductComponent },
