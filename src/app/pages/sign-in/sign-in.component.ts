@@ -11,6 +11,10 @@ export class SignInComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  SendToForgetPassword() {
+    this.router.navigateByUrl('/recuperar-senha');
+  }
+
   handleClick() {
     this.router.navigateByUrl('/home');
   }

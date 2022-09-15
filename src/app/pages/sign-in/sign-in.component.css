@@ -57,15 +57,32 @@
   background-color: #161616;
 }
 
+.Content-f-p {
+  display: flex;
+  justify-content: center;
+}
+
+.TextForgetPassword {
+  font-size: 20px;
+  font-weight: 200;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  cursor: pointer;
+}
+.TextForgetPassword:hover {
+  color: #161616;
+  border-bottom: 2px solid #161616;
+}
+
 .btn-container {
-  margin: 20px 0px;
+  margin: 10px 0px;
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
 button {
-  width: 100px;
+  width: 120px;
   height: 40px;
   border-radius: 8px;
   border: none;

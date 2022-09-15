@@ -32,25 +32,29 @@
               [(ngModel)]="value2"
               placeholder="Digite sua senha"
             />
-
-            <div class="btn-container">
-              <button
-                pButton
-                pRipple
-                (click)="cancelClick()"
-                type="button"
-                label="Cancelar"
-                class="p-button-raised p-button-secondary"
-              ></button>
-              <button
-                pButton
-                pRipple
-                type="button"
-                label="Login"
-                (click)="handleClick()"
-                class="p-button-raised p-button-danger"
-              ></button>
-            </div>
+          </div>
+          <div class="Content-f-p">
+            <p class="TextForgetPassword" (click)="SendToForgetPassword()">
+              Esqueceu a senha?
+            </p>
+          </div>
+          <div class="btn-container">
+            <button
+              pButton
+              pRipple
+              (click)="cancelClick()"
+              type="button"
+              label="Cancelar"
+              class="p-button-raised p-button-secondary"
+            ></button>
+            <button
+              pButton
+              pRipple
+              type="button"
+              label="Login"
+              (click)="handleClick()"
+              class="p-button-raised p-button-danger"
+            ></button>
           </div>
         </div>
       </section>
