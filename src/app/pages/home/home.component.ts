@@ -13,4 +13,7 @@ export class HomeComponent implements OnInit {
   handleClick() {
     //execute action
   }
+
+  tableTitle = 'Chocolate';
+  CardText = 'Chocolate Amargo';
 }

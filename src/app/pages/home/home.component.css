@@ -33,4 +33,76 @@ header {
   text-align: center;
   text-transform: uppercase;
 }
+
+.container {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* TABELAS */
+
+.table-container {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #067344;
+}
+
+.table-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* ---------------------------------- */
+
+/* CARD */
+
+.Card {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.imgCard {
+  max-width: 70px;
+}
+.imgCard img {
+  width: 100%;
+}
+
+/* .textCard {
+} */
+
+.itensTextCard {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: #161616;
+}
+
+.btnCard {
+  display: flex;
+  gap: 20px;
+}
+.btnCard button {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 7px;
+  background-color: #067344;
+}
 /* ---------------------------------- */
