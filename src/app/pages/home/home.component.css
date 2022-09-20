@@ -103,6 +103,14 @@ header {
   height: 30px;
   border: none;
   border-radius: 7px;
-  background-color: #067344;
+
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+}
+
+.btnDelete {
+  background-color: #d92929;
 }
 /* ---------------------------------- */

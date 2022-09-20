@@ -14,6 +14,16 @@ export class HomeComponent implements OnInit {
     //execute action
   }
 
+  clickEdit() {
+    //execute action
+  }
+
+  clickDetails() {
+    //execute action
+  }
+  clickDelete() {
+    //execute action
+  }
   tableTitle = 'Chocolate';
   CardText = 'Chocolate Amargo';
 }

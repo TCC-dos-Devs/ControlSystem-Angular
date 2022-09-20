@@ -55,83 +55,23 @@
             <div class="textCard">
               <p class="itensTextCard">{{ CardText }}</p>
               <div class="btnCard">
-                <button>Editar</button>
-                <button>Detalhes</button>
-                <button>Excluir</button>
-              </div>
-            </div>
-          </div>
-          <div class="Card">
-            <div class="imgCard">
-              <img src="../../../assets/logoIF.png" />
-            </div>
-            <div class="textCard">
-              <p class="itensTextCard">{{ CardText }}</p>
-              <div class="btnCard">
-                <button>Editar</button>
-                <button>Detalhes</button>
-                <button>Excluir</button>
-              </div>
-            </div>
-          </div>
-          <div class="Card">
-            <div class="imgCard">
-              <img src="../../../assets/logoIF.png" />
-            </div>
-            <div class="textCard">
-              <p class="itensTextCard">{{ CardText }}</p>
-              <div class="btnCard">
-                <button>Editar</button>
-                <button>Detalhes</button>
-                <button>Excluir</button>
+                <button (click)="clickDetails()" class="btnDetails">
+                  Detalhes
+                </button>
+
+                <button (click)="clickEdit()" class="btnEdit">Editar</button>
+                <button (click)="clickDelete()" class="btnDelete">
+                  Excluir
+                </button>
               </div>
             </div>
           </div>
         </div>
         <div class="table-container">
           <p class="table-title">{{ tableTitle }}</p>
-          <div class="Card">
-            <div class="imgCard">
-              <img src="../../../assets/logoIF.png" />
-            </div>
-            <div class="textCard">
-              <p class="itensTextCard">{{ CardText }}</p>
-              <div class="btnCard">
-                <button>Editar</button>
-                <button>Detalhes</button>
-                <button>Excluir</button>
-              </div>
-            </div>
-          </div>
-          <div class="Card">
-            <div class="imgCard">
-              <img src="../../../assets/logoIF.png" />
-            </div>
-            <div class="textCard">
-              <p class="itensTextCard">{{ CardText }}</p>
-              <div class="btnCard">
-                <button>Editar</button>
-                <button>Detalhes</button>
-                <button>Excluir</button>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="table-container">
           <p class="table-title">{{ tableTitle }}</p>
-          <div class="Card">
-            <div class="imgCard">
-              <img src="../../../assets/logoIF.png" />
-            </div>
-            <div class="textCard">
-              <p class="itensTextCard">{{ CardText }}</p>
-              <div class="btnCard">
-                <button>Editar</button>
-                <button>Detalhes</button>
-                <button>Excluir</button>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </main>
