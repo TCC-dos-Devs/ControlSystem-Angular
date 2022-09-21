@@ -19,6 +19,12 @@ export class UsuarioService {
       .pipe(map((resposta) => <UsuarioModel[]>resposta));
   }
 
+  buscarPorId(id: number): Observable<UsuarioModel> {
+    return this.http
+      .get(this.url + '/' + id)
+      .pipe(map((resposta) => <UsuarioModel>resposta));
+  }
+
   salvar(usuario: UsuarioDTO): Observable<UsuarioModel> {
     return this.http
       .post(this.url, usuario)

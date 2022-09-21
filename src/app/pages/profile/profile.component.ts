@@ -1,5 +1,7 @@
+import { UsuarioDTO } from './../../dtos/usuario.dto';
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
+import { UsuarioService } from 'src/app/usuario.service';
 
 @Component({
   selector: 'app-profile',
@@ -25,8 +27,23 @@ import { MessageService } from 'primeng/api';
   ],
 })
 export class ProfileComponent implements OnInit {
-  constructor(private messageService: MessageService) {}
-  ngOnInit(): void {}
+  usuario: UsuarioDTO = {
+    id: 0,
+    email: '',
+    usuario: '',
+    senha: '',
+    confirmar: '',
+  };
+
+  constructor(
+    private messageService: MessageService,
+    private service: UsuarioService
+  ) {}
+
+  ngOnInit(): void {
+    this.buscar();
+  }
+
   uploadedFiles: any[] = [];
 
   onBasicUpload(event: { files: any }) {
@@ -38,6 +55,18 @@ export class ProfileComponent implements OnInit {
       severity: 'info',
       summary: 'File Uploaded',
       detail: '',
+    });
+  }
+
+  buscar() {
+    this.service.buscarPorId(2).subscribe((resposta) => {
+      this.usuario = {
+        id: resposta.id,
+        email: resposta.email,
+        usuario: resposta.usuario,
+        senha: resposta.senha,
+        confirmar: resposta.senha,
+      };
     });
   }
 

@@ -65,7 +65,7 @@
                   type="email"
                   aria-describedby="username1-help"
                   pInputText
-                  [(ngModel)]="value1"
+                  [(ngModel)]="usuario.email"
                   placeholder="example@gmail.com"
                 />
 
@@ -76,7 +76,7 @@
                   type="username"
                   aria-describedby="username1-help"
                   pInputText
-                  [(ngModel)]="value2"
+                  [(ngModel)]="usuario.usuario"
                   placeholder="userName"
                 />
 
@@ -84,7 +84,7 @@
                 <p-password
                   id="value2"
                   placeholder="******S7"
-                  [(ngModel)]="value3"
+                  [(ngModel)]="usuario.senha"
                   [toggleMask]="true"
                 ></p-password>
               </div>
