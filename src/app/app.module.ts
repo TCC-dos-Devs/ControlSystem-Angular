@@ -7,6 +7,7 @@ import { ButtonModule } from 'primeng/button';
 import { AvatarModule } from 'primeng/avatar';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { InputNumberModule } from 'primeng/inputnumber';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -52,6 +53,7 @@ import { WelcomeComponent } from './pages/welcome/welcome.component';
     AvatarModule,
     DialogModule,
     InputTextareaModule,
+    InputNumberModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

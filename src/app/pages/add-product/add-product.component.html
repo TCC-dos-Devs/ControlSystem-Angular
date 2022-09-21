@@ -1,1 +1,77 @@
-<p>add-product works!</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <main class="container">
+        <div>
+          <h1 class="titlePage">Adicionar Produto</h1>
+        </div>
+
+        <div class="content">
+          <label for="name">Nome do produto*</label>
+          <input
+            placeholder="Digite aqui..."
+            id="name"
+            type="text"
+            pInputText
+          />
+          <label for="sabor">Sabor</label>
+          <input
+            placeholder="Digite aqui..."
+            id="sabor"
+            type="text"
+            pInputText
+          />
+          <label for="validade">Validade do produto*</label>
+          <input placeholder="" id="validade" type="date" pInputText />
+          <label for="categoria">Categoria</label>
+          <input
+            placeholder="Digite aqui..."
+            id="categoria"
+            type="text"
+            pInputText
+          />
+          <label for="quantidade">Quantidade</label>
+          <input placeholder="00" id="quantidade" type="number" pInputText />
+
+          <div class="btnContent">
+            <button
+              pButton
+              pRipple
+              type="button"
+              label="Cadastrar"
+              (click)="addProduct()"
+              class="p-button-raised p-button-danger"
+              [ngStyle]="{
+                backgroundColor: 'var(--red-500)',
+                border: 'none',
+                width: '200px',
+                height: '50px'
+              }"
+            ></button>
+            <button
+              pButton
+              pRipple
+              type="button"
+              label="Voltar"
+              (click)="goBack()"
+              class="p-button-raised p-button-danger"
+              [ngStyle]="{
+                backgroundColor: '#ccc',
+                border: 'none',
+                width: '200px',
+                height: '50px'
+              }"
+            ></button>
+          </div>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>
