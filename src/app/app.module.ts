@@ -5,8 +5,11 @@ import { PasswordModule } from 'primeng/password';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { AvatarModule } from 'primeng/avatar';
+import { DialogModule } from 'primeng/dialog';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -38,6 +41,7 @@ import { WelcomeComponent } from './pages/welcome/welcome.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     PasswordModule,
     FormsModule,
@@ -46,6 +50,8 @@ import { WelcomeComponent } from './pages/welcome/welcome.component';
     InputTextModule,
     ButtonModule,
     AvatarModule,
+    DialogModule,
+    InputTextareaModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

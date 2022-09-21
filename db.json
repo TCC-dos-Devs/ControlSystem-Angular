@@ -5,6 +5,13 @@
       "email": "teste@teste.com",
       "usuario": "teste",
       "senha": "teste"
+    },
+    {
+      "id": 2,
+      "email": "artemail@teste.com",
+      "usuario": "Arthur",
+      "senha": "asdadads",
+      "confirmar": "123"
     }
   ]
 }

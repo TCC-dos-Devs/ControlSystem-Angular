@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -15,15 +16,27 @@ export class HomeComponent implements OnInit {
   }
 
   clickEdit() {
-    //execute action
-  }
-
-  clickDetails() {
+    this.router.navigateByUrl('atualizar-produto');
     //execute action
   }
   clickDelete() {
     //execute action
   }
+
+  displayResponsive: boolean = false;
+
+  showDetails() {
+    this.displayResponsive = true;
+  }
   tableTitle = 'Chocolate';
   CardText = 'Chocolate Amargo';
+
+  detalhes = {
+    categoria: 'Iorgute',
+    validade: '09/2022',
+    sabor: 'Morango',
+    quantidade: '20',
+  };
+
+  autoResize: boolean = false;
 }
