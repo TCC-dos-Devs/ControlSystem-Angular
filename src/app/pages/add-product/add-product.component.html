@@ -6,20 +6,45 @@
 
     <div class="content">
       <label for="name">Nome do produto*</label>
-      <input placeholder="Digite aqui..." id="name" type="text" pInputText />
+      <input
+        placeholder="Digite aqui..."
+        id="name"
+        type="text"
+        [(ngModel)]="produto.name"
+        pInputText
+      />
       <label for="sabor">Sabor</label>
-      <input placeholder="Digite aqui..." id="sabor" type="text" pInputText />
+      <input
+        placeholder="Digite aqui..."
+        id="sabor"
+        type="text"
+        [(ngModel)]="produto.sabor"
+        pInputText
+      />
       <label for="validade">Validade do produto*</label>
-      <input placeholder="" id="validade" type="date" pInputText />
+      <input
+        placeholder=""
+        id="validade"
+        type="date"
+        [(ngModel)]="produto.validade"
+        pInputText
+      />
       <label for="categoria">Categoria</label>
       <input
         placeholder="Digite aqui..."
         id="categoria"
         type="text"
+        [(ngModel)]="produto.categoria"
         pInputText
       />
       <label for="quantidade">Quantidade</label>
-      <input placeholder="00" id="quantidade" type="number" pInputText />
+      <input
+        placeholder="00"
+        id="quantidade"
+        type="number"
+        [(ngModel)]="produto.quantidade"
+        pInputText
+      />
 
       <div class="btnContent">
         <button
@@ -27,7 +52,7 @@
           pRipple
           type="button"
           label="Cadastrar"
-          (click)="addProduct()"
+          (click)="adicionar()"
           class="p-button-raised p-button-danger"
           [ngStyle]="{
             backgroundColor: 'var(--red-500)',

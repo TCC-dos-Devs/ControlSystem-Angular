@@ -5,13 +5,17 @@
       "email": "teste@teste.com",
       "usuario": "teste",
       "senha": "teste"
-    },
+    }
+  ],
+  "produtos": [
     {
-      "id": 2,
-      "email": "artemail@teste.com",
-      "usuario": "Arthur",
-      "senha": "asdadads",
-      "confirmar": "123"
+      "id": 1,
+      "categoria": "teste",
+      "name": "teste",
+      "validade": "00/00/2022",
+      "sabor": "teste",
+      "quantidade": "1",
+      "descricao": "teste"
     }
   ]
 }

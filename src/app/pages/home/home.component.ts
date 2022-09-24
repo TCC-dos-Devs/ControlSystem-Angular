@@ -1,5 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { ProdutoDTO } from 'src/app/dtos/produtos.dto';
+import { ProdutoService } from 'src/app/produto.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor(private router: Router) {}
+  produto: ProdutoDTO = {
+    id: 0,
+    categoria: '',
+    name: '',
+    validade: 0,
+    sabor: '',
+    quantidade: 0,
+    descricao: '',
+  };
+  constructor(private router: Router, private service: ProdutoService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.buscar();
+  }
 
   handleClick() {
     //execute action
@@ -28,15 +41,19 @@ export class HomeComponent implements OnInit {
   showDetails() {
     this.displayResponsive = true;
   }
-  tableTitle = 'Chocolate';
-  CardText = 'Chocolate Amargo';
-
-  detalhes = {
-    categoria: 'Iorgute',
-    validade: '09/2022',
-    sabor: 'Morango',
-    quantidade: '20',
-  };
-
   autoResize: boolean = false;
+
+  buscar() {
+    this.service.buscarPorId(1).subscribe((resposta) => {
+      this.produto = {
+        id: resposta.id,
+        categoria: resposta.categoria,
+        name: resposta.name,
+        validade: resposta.validade,
+        sabor: resposta.sabor,
+        quantidade: resposta.quantidade,
+        descricao: resposta.descricao,
+      };
+    });
+  }
 }

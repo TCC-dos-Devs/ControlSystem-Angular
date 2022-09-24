@@ -1,5 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { ProdutoDTO } from 'src/app/dtos/produtos.dto';
+import { ProdutoService } from 'src/app/produto.service';
 
 @Component({
   selector: 'app-add-product',
@@ -7,16 +9,37 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-product.component.css'],
 })
 export class AddProductComponent implements OnInit {
-  constructor(private router: Router) {}
+  produto: ProdutoDTO = {
+    id: 0,
+    categoria: '',
+    name: '',
+    validade: 0,
+    sabor: '',
+    quantidade: 0,
+    descricao: '',
+  };
+  constructor(private router: Router, private service: ProdutoService) {}
 
   ngOnInit(): void {}
 
   value4!: string;
 
-  addProduct = () => {
-    this.router.navigateByUrl('home');
-  };
   goBack = () => {
     this.router.navigateByUrl('home');
   };
+
+  adicionar() {
+    this.service.salvar(this.produto).subscribe((resposta) => {
+      this.produto = {
+        id: 0,
+        categoria: '',
+        name: '',
+        validade: 0,
+        sabor: '',
+        quantidade: 0,
+        descricao: '',
+      };
+      this.router.navigateByUrl('home');
+    });
+  }
 }

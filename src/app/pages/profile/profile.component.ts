@@ -1,13 +1,11 @@
 import { UsuarioDTO } from './../../dtos/usuario.dto';
 import { Component, OnInit } from '@angular/core';
-import { MessageService } from 'primeng/api';
 import { UsuarioService } from 'src/app/usuario.service';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css'],
-  providers: [MessageService],
 
   styles: [
     `
@@ -35,31 +33,14 @@ export class ProfileComponent implements OnInit {
     confirmar: '',
   };
 
-  constructor(
-    private messageService: MessageService,
-    private service: UsuarioService
-  ) {}
+  constructor(private service: UsuarioService) {}
 
   ngOnInit(): void {
     this.buscar();
   }
 
-  uploadedFiles: any[] = [];
-
-  onBasicUpload(event: { files: any }) {
-    for (let file of event.files) {
-      this.uploadedFiles.push(file);
-    }
-
-    this.messageService.add({
-      severity: 'info',
-      summary: 'File Uploaded',
-      detail: '',
-    });
-  }
-
   buscar() {
-    this.service.buscarPorId(2).subscribe((resposta) => {
+    this.service.buscarPorId(1).subscribe((resposta) => {
       this.usuario = {
         id: resposta.id,
         email: resposta.email,

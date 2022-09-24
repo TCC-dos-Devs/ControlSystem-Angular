@@ -1,126 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
+<header>
+  <div>
+    <h1 class="titleHeader">Instituto Federal Baiano Campus Uruçuca</h1>
+  </div>
+  <div class="btnArea">
+    <button
+      pButton
+      pRipple
+      type="button"
+      label="Adicionar produto"
+      (click)="handleClick()"
+      routerLink="/adicionar-produto"
+      class="p-button-raised p-button-danger"
+      [ngStyle]="{
+        backgroundColor: 'var(--red-500)',
+        border: 'none',
+        width: '200px',
+        height: '50px'
+      }"
+    ></button>
+    <button
+      pButton
+      pRipple
+      type="button"
+      icon="pi pi-user"
+      routerLink="/perfil"
+      class="p-button-rounded p-button-info"
+      [ngStyle]="{
+        backgroundColor: 'var(--bluegray-300)',
+        border: 'none',
+        width: '70px',
+        height: '70px'
+      }"
+    ></button>
+  </div>
+</header>
+<main>
+  <h1 class="titlePage">Produtos</h1>
+  <section class="container">
+    <div class="table-container">
+      <p class="table-title">{{ produto.categoria }}</p>
       <div>
-        <h1 class="titleHeader">Instituto Federal Baiano Campus Uruçuca</h1>
-      </div>
-      <div class="btnArea">
-        <button
-          pButton
-          pRipple
-          type="button"
-          label="Adicionar produto"
-          (click)="handleClick()"
-          routerLink="/adicionar-produto"
-          class="p-button-raised p-button-danger"
-          [ngStyle]="{
-            backgroundColor: 'var(--red-500)',
-            border: 'none',
-            width: '200px',
-            height: '50px'
-          }"
-        ></button>
-        <button
-          pButton
-          pRipple
-          type="button"
-          icon="pi pi-user"
-          routerLink="/perfil"
-          class="p-button-rounded p-button-info"
-          [ngStyle]="{
-            backgroundColor: 'var(--bluegray-300)',
-            border: 'none',
-            width: '70px',
-            height: '70px'
-          }"
-        ></button>
-      </div>
-    </header>
-    <main>
-      <h1 class="titlePage">Produtos</h1>
-      <section class="container">
-        <div class="table-container">
-          <p class="table-title">{{ tableTitle }}</p>
+        <div class="Card">
+          <div class="imgCard">
+            <img src="../../../assets/logoIF.png" />
+          </div>
+          <div class="textCard">
+            <p class="itensTextCard">{{ produto.name }}</p>
+            <div class="btnCard">
+              <button (click)="clickEdit()" class="btnEdit">Editar</button>
 
-          <div class="Card">
-            <div class="imgCard">
-              <img src="../../../assets/logoIF.png" />
-            </div>
-            <div class="textCard">
-              <p class="itensTextCard">{{ CardText }}</p>
-              <div class="btnCard">
-                <button (click)="clickEdit()" class="btnEdit">Editar</button>
-
-                <button
-                  type="button"
-                  class="btnDetails"
-                  (click)="showDetails()"
-                  label="Detalhes"
-                >
-                  Detalhes
-                </button>
-                <button (click)="clickDelete()" class="btnDelete">
-                  Excluir
-                </button>
-                <p-dialog
-                  header="Chocolate"
-                  [(visible)]="displayResponsive"
-                  [breakpoints]="{ '960px': '75vw' }"
-                  [style]="{ width: '50vw' }"
-                  [draggable]="false"
-                  [resizable]="false"
-                >
-                  <div class="modal-content">
-                    <p class="modal-subtitle">Detalhes</p>
-                    <div class="modalInfo">
-                      <div class="infoTextModal">
-                        <p class="infoText">
-                          Categoria: <span>{{ detalhes.categoria }}</span>
-                        </p>
-                        <div class="infoText">
-                          <p>
-                            Validade: <span>{{ detalhes.validade }}</span>
-                          </p>
-                        </div>
-                        <p class="infoText">
-                          Sabor: <span>{{ detalhes.sabor }}</span>
-                        </p>
-                        <p class="infoText">
-                          Quantidade: <span>{{ detalhes.quantidade }}</span>
+              <button
+                type="button"
+                class="btnDetails"
+                (click)="showDetails()"
+                label="Detalhes"
+              >
+                Detalhes
+              </button>
+              <button (click)="clickDelete()" class="btnDelete">Excluir</button>
+              <p-dialog
+                header="Chocolate"
+                [(visible)]="displayResponsive"
+                [breakpoints]="{ '960px': '75vw' }"
+                [style]="{ width: '50vw' }"
+                [draggable]="false"
+                [resizable]="false"
+              >
+                <div class="modal-content">
+                  <p class="modal-subtitle">Detalhes</p>
+                  <div class="modalInfo">
+                    <div class="infoTextModal">
+                      <p class="infoText">
+                        Categoria: <span>{{ produto.categoria }}</span>
+                      </p>
+                      <div class="infoText">
+                        <p>
+                          Validade: <span>{{ produto.validade }}</span>
                         </p>
                       </div>
-                      <div class="modalImg">
-                        <img
-                          src="../../../assets/icons8-iogurte-96 3.png"
-                          alt=""
-                        />
-                      </div>
+                      <p class="infoText">
+                        Sabor: <span>{{ produto.sabor }}</span>
+                      </p>
+                      <p class="infoText">
+                        Quantidade: <span>{{ produto.quantidade }}</span>
+                      </p>
                     </div>
-                    <div class="modalDescription">
-                      <p class="modal-subtitle">Descrição (opcional)</p>
-                      <textarea
-                        [rows]="5"
-                        [cols]="30"
-                        pInputTextarea
-                        maxlength="250"
-                        placeholder="Digite aqui..."
-                        [autoResize]="autoResize"
-                      ></textarea>
+                    <div class="modalImg">
+                      <img
+                        src="../../../assets/icons8-iogurte-96 3.png"
+                        alt=""
+                      />
                     </div>
                   </div>
-                </p-dialog>
-              </div>
+                  <div class="modalDescription">
+                    <p class="modal-subtitle">Descrição (opcional)</p>
+                    <textarea
+                      [rows]="5"
+                      [cols]="30"
+                      pInputTextarea
+                      maxlength="250"
+                      placeholder="Digite aqui..."
+                      [autoResize]="autoResize"
+                      >{{ produto.descricao }}</textarea
+                    >
+                  </div>
+                </div>
+              </p-dialog>
             </div>
           </div>
         </div>
-      </section>
-    </main>
-  </body>
-</html>
+      </div>
+    </div>
+  </section>
+</main>
