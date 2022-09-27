@@ -105,6 +105,18 @@
                     >
                   </div>
                 </div>
+                <ng-template pTemplate="footer">
+                  <p-button
+                    (click)="displayResponsive = false"
+                    label="No"
+                    styleClass="p-button-text"
+                  ></p-button>
+                  <p-button
+                    (click)="displayResponsive = false"
+                    label="Yes"
+                    styleClass="p-button-text"
+                  ></p-button>
+                </ng-template>
               </p-dialog>
             </div>
           </div>

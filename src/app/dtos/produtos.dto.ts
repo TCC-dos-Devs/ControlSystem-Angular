@@ -7,3 +7,5 @@ export interface ProdutoDTO {
   quantidade: number;
   descricao: string;
 }
+
+// json-server --watch db.json
