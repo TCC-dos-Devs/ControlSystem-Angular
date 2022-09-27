@@ -8,15 +8,21 @@ import { HomeComponent } from './pages/home/home.component';
 import { AddProductComponent } from './pages/add-product/add-product.component';
 import { UpdateProductComponent } from './pages/update-product/update-product.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { DevelopersComponent } from './pages/developers/developers.component';
+import { IfbaianoComponent } from './pages/ifbaiano/ifbaiano.component';
+import { WelcomeComponent } from './pages/welcome/welcome.component';
 
 const routes: Routes = [
+  { path: '', component: WelcomeComponent },
   { path: 'login', component: SignInComponent },
-  { path: 'cadastro', component: SignUpComponent },
-  { path: 'esqueceu-senha', component: ForgetPasswordComponent },
-  { path: '', component: HomeComponent },
+  { path: 'criar-conta', component: SignUpComponent },
+  { path: 'recuperar-senha', component: ForgetPasswordComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'adicionar-produto', component: AddProductComponent },
   { path: 'atualizar-produto', component: UpdateProductComponent },
-  { path: 'profile', component: ProfileComponent },
+  { path: 'perfil', component: ProfileComponent },
+  { path: 'desenvolvedores', component: DevelopersComponent },
+  { path: 'ifbaiano', component: IfbaianoComponent },
 ];
 
 @NgModule({

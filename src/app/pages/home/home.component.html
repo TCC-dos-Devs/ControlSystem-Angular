@@ -1,2 +1,127 @@
-<h2>home</h2>
-<a routerLink="/esqueceu-senha">Esqueci Senha</a>
+<header>
+  <div>
+    <h1 class="titleHeader">Instituto Federal Baiano Campus Uruçuca</h1>
+  </div>
+  <div class="btnArea">
+    <button
+      pButton
+      pRipple
+      type="button"
+      label="Adicionar produto"
+      (click)="handleClick()"
+      routerLink="/adicionar-produto"
+      class="p-button-raised p-button-danger"
+      [ngStyle]="{
+        backgroundColor: 'var(--red-500)',
+        border: 'none',
+        width: '200px',
+        height: '50px'
+      }"
+    ></button>
+    <button
+      pButton
+      pRipple
+      type="button"
+      icon="pi pi-user"
+      routerLink="/perfil"
+      class="p-button-rounded p-button-info"
+      [ngStyle]="{
+        backgroundColor: 'var(--bluegray-300)',
+        border: 'none',
+        width: '70px',
+        height: '70px'
+      }"
+    ></button>
+  </div>
+</header>
+<main>
+  <h1 class="titlePage">Produtos</h1>
+  <section class="container">
+    <div class="table-container">
+      <p class="table-title">{{ produto.categoria }}</p>
+      <div>
+        <div class="Card">
+          <div class="imgCard">
+            <img src="../../../assets/logoIF.png" />
+          </div>
+          <div class="textCard">
+            <p class="itensTextCard">{{ produto.name }}</p>
+            <div class="btnCard">
+              <button (click)="clickEdit()" class="btnEdit">Editar</button>
+
+              <button
+                type="button"
+                class="btnDetails"
+                (click)="showDetails()"
+                label="Detalhes"
+              >
+                Detalhes
+              </button>
+              <button (click)="clickDelete()" class="btnDelete">Excluir</button>
+              <p-dialog
+                header="Chocolate"
+                [(visible)]="displayResponsive"
+                [breakpoints]="{ '960px': '75vw' }"
+                [style]="{ width: '50vw' }"
+                [draggable]="false"
+                [resizable]="false"
+              >
+                <div class="modal-content">
+                  <p class="modal-subtitle">Detalhes</p>
+                  <div class="modalInfo">
+                    <div class="infoTextModal">
+                      <p class="infoText">
+                        Categoria: <span>{{ produto.categoria }}</span>
+                      </p>
+                      <div class="infoText">
+                        <p>
+                          Validade: <span>{{ produto.validade }}</span>
+                        </p>
+                      </div>
+                      <p class="infoText">
+                        Sabor: <span>{{ produto.sabor }}</span>
+                      </p>
+                      <p class="infoText">
+                        Quantidade: <span>{{ produto.quantidade }}</span>
+                      </p>
+                    </div>
+                    <div class="modalImg">
+                      <img
+                        src="../../../assets/icons8-iogurte-96 3.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="modalDescription">
+                    <p class="modal-subtitle">Descrição (opcional)</p>
+                    <textarea
+                      [rows]="5"
+                      [cols]="30"
+                      pInputTextarea
+                      maxlength="250"
+                      placeholder="Digite aqui..."
+                      [autoResize]="autoResize"
+                      >{{ produto.descricao }}</textarea
+                    >
+                  </div>
+                </div>
+                <ng-template pTemplate="footer">
+                  <p-button
+                    (click)="displayResponsive = false"
+                    label="No"
+                    styleClass="p-button-text"
+                  ></p-button>
+                  <p-button
+                    (click)="displayResponsive = false"
+                    label="Yes"
+                    styleClass="p-button-text"
+                  ></p-button>
+                </ng-template>
+              </p-dialog>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

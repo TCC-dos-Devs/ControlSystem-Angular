@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+  </head>
+  <body>
+    <section class="container">
+      <section class="content-left">
+        <p class="title">
+          Olá, bem-vindo ao <br />
+          Control System
+        </p>
+
+        <div class="input-container">
+          <div class="btn-container">
+            <button
+              pButton
+              pRipple
+              (click)="loginClick()"
+              type="button"
+              label="Faça seu Login"
+              class="p-button-raised p-button-secondary"
+            ></button>
+            <button
+              pButton
+              pRipple
+              type="button"
+              label="Faça seu Cadastro"
+              (click)="cadastroClick()"
+              class="p-button-raised p-button-danger"
+            ></button>
+          </div>
+        </div>
+      </section>
+      <section class="content-right">
+        <div class="image">
+          <img src="../../../assets/logoIF.png" />
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

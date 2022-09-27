@@ -1,1 +1,82 @@
-<p>sign-up works from mwila!</p>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <section class="container">
+      <section class="content-left">
+        <p class="title">Criar Conta</p>
+        <div class="input-container">
+          <div class="content-input">
+            <label for="email1">E-mail</label>
+            <input
+              id="email1"
+              type="email"
+              aria-describedby="username1-help"
+              pInputText
+              [(ngModel)]="usuario.email"
+              placeholder="Digite seu Email"
+            />
+
+            <label for="username1">Usuário</label>
+            <input
+              id="username1"
+              type="text"
+              aria-describedby="username1-help"
+              pInputText
+              [(ngModel)]="usuario.usuario"
+              placeholder="Digite seu usuário"
+            />
+
+            <label for="password1">Senha</label>
+            <input
+              id="password1"
+              type="password"
+              aria-describedby="username1-help"
+              pInputText
+              [(ngModel)]="usuario.senha"
+              placeholder="Digite sua senha"
+            />
+            <label for="password2">Confirmar Senha</label>
+            <input
+              id="password2"
+              type="password"
+              aria-describedby="username1-help"
+              pInputText
+              [(ngModel)]="usuario.confirmar"
+              placeholder="Confirme sua senha"
+            />
+
+            <div class="btn-container">
+              <button
+                pButton
+                pRipple
+                routerLink="/"
+                type="button"
+                label="Cancelar"
+                class="p-button-raised p-button-secondary"
+              ></button>
+              <button
+                pButton
+                pRipple
+                type="submit"
+                (click)="adicionar()"
+                label="Criar conta"
+                class="p-button-raised p-button-danger"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content-right">
+        <div class="image">
+          <img src="../../../assets/logoIF.png" />
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

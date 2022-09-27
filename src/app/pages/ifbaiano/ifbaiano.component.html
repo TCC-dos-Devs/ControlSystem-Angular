@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="🧑🏽‍💻" />
+    <title>Artx Links</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main id="main">
+      <div class="container">
+        <img
+          class="avatar"
+          src="https://d1fdloi71mui9q.cloudfront.net/NVyubGooQtSoKzKQ179g_o605yVv20RU0iXa6"
+          alt="Imagem do ifbaiano"
+        />
+        <h1>IF Baiano</h1>
+        <p>@ifbaiano_urucuca</p>
+
+        <ul>
+          <li>
+            <a
+              href="https://www.ifbaiano.edu.br/unidades/urucuca/"
+              target="_blank"
+              >WebSite</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/ifbaiano_urucuca/"
+              target="_blank"
+              >Instagram</a
+            >
+          </li>
+        </ul>
+        <div class="btn">
+          <button
+            pButton
+            pRipple
+            type="button"
+            label="Voltar"
+            (click)="handleClick()"
+            routerLink="/perfil"
+            class="p-button-raised p-button-danger"
+            [ngStyle]="{
+              backgroundColor: 'var(--red-500)',
+              border: 'none',
+              width: '200px',
+              height: '50px',
+              color: '#fff',
+              fontFamily: 'Roboto Mono'
+            }"
+          ></button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -4,9 +4,16 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-forget-password',
   templateUrl: './forget-password.component.html',
   styleUrls: ['./forget-password.component.css'],
+  styles: [``],
 })
 export class ForgetPasswordComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  value1!: string;
+
+  handleClick() {
+    //execute action
+  }
 }
