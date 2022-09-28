@@ -3,5 +3,6 @@ export interface UsuarioDTO {
   email: string;
   usuario: string;
   senha: string;
+  novasenha: string;
   confirmar: string;
 }

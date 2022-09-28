@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { UsuarioDTO } from './../../dtos/usuario.dto';
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from 'src/app/services/usuario.service';
@@ -30,10 +31,11 @@ export class ProfileComponent implements OnInit {
     email: '',
     usuario: '',
     senha: '',
+    novasenha: '',
     confirmar: '',
   };
 
-  constructor(private service: UsuarioService) {}
+  constructor(private router: Router, private service: UsuarioService) {}
 
   ngOnInit(): void {
     this.buscar();
@@ -46,6 +48,7 @@ export class ProfileComponent implements OnInit {
         email: resposta.email,
         usuario: resposta.usuario,
         senha: resposta.senha,
+        novasenha: resposta.senha,
         confirmar: resposta.senha,
       };
     });

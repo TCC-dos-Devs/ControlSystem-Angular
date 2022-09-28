@@ -17,6 +17,7 @@ export class SignUpComponent implements OnInit {
     email: '',
     usuario: '',
     senha: '',
+    novasenha: '',
     confirmar: '',
   };
 
@@ -31,6 +32,7 @@ export class SignUpComponent implements OnInit {
         email: '',
         usuario: '',
         senha: '',
+        novasenha: '',
         confirmar: '',
       };
       this.router.navigateByUrl('/home');

@@ -80,13 +80,13 @@
                   placeholder="userName"
                 />
 
-                <label class="label" for="value4">Senha</label>
+                <!-- <label class="label" for="value4">Senha</label>
                 <p-password
                   id="value2"
                   placeholder="******S7"
                   [(ngModel)]="usuario.senha"
                   [toggleMask]="true"
-                ></p-password>
+                ></p-password> -->
               </div>
             </div>
             <div class="rightContent">
@@ -96,23 +96,28 @@
                 <p-password
                   id="value2"
                   placeholder="Digite a senha atual"
-                  [(ngModel)]="value4"
+                  [(ngModel)]="usuario.senha"
                   [toggleMask]="true"
                 ></p-password>
                 <label class="label" for="value3">Nova senha</label>
                 <p-password
                   id="value3"
                   placeholder="Digite a nova senha"
-                  [(ngModel)]="value5"
+                  [(ngModel)]="usuario.novasenha"
                   [toggleMask]="true"
                 ></p-password>
                 <label class="label" for="value4">Confirme a senha</label>
                 <p-password
                   id="value4"
                   placeholder="Digite a nova senha novamente"
-                  [(ngModel)]="value6"
+                  [(ngModel)]="usuario.novasenha"
                   [toggleMask]="true"
                 ></p-password>
+                <div class="btnContent">
+                  <button [(ngModel)]="usuario.confirmar" class="btnConfirme">
+                    Confirmar
+                  </button>
+                </div>
               </div>
             </div>
           </div>
